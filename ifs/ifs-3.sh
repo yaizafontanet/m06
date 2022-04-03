@@ -5,4 +5,9 @@ n1=$1
 op=$2
 n2=$3
 
-calcul()
+calcul() {
+    resultat=$(($n1 $op $n2))
+    echo $resultat
+}
+
+echo calcul()
