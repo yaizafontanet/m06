@@ -1,6 +1,6 @@
 #!/bin/bash
 #Demana usuari
-echo "Indica el nom usuari del sistema"
+echo "Indica el nom usuari del sistema:"
 read usuari
 
 #Comprovació existencia del usuari

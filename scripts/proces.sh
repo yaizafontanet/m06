@@ -1,7 +1,5 @@
 #!/bin/bash
-#i elimini tots els processos que ens pertanyen i que tenen aquest nom. 
-
-#enama nom del proces
+#Denama nom del proces
 echo "Donam el nom del proces que vols eliminarar:"
 read nom
 

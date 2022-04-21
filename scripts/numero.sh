@@ -1,2 +1,17 @@
 #!/bin/bash
-#Feu un shell script que escrigui un número aleatori per pantalla i demani a l’usuari si vol sortir. Si l’usuari escriu “s” o “S” el programa finalitza, en qualsevol altre cas el programa continua i torna a fer el mateix.
+#Bucle per aturar o no el programa
+while :
+do
+    #Mostra un número aleatori del 1 al 10 per pantalla
+    echo $((1 + SRANDOM % 10))
+
+    #Demana a l’usuari si vol sortir
+    echo "Vols finalitzar el programa? (S or s)"
+    read resposta
+
+    #condició per aturar el programa
+    if [$resposta == "S"] || [$resposta == "s"] ; then
+        echo "Programa finalitzat"
+        break
+    fi
+done
