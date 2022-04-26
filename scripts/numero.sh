@@ -3,14 +3,14 @@
 while :
 do
     #Mostra un número aleatori del 1 al 10 per pantalla
-    echo $((1 + SRANDOM % 10))
+    echo $((1 + $RANDOM % 10))
 
     #Demana a l’usuari si vol sortir
     echo "Vols finalitzar el programa? (S or s)"
     read resposta
 
     #condició per aturar el programa
-    if [$resposta == "S"] || [$resposta == "s"] ; then
+    if [[ "$resposta" == "S" ]] || [[ "$resposta" == "s" ]] ; then
         echo "Programa finalitzat"
         break
     fi

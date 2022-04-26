@@ -7,7 +7,7 @@ read usuari
 if [ $(getent passwd $usuari) ] ; then
         echo "L'usuari $usuari SÍ que existeix."
         #llistar processos
-        echo "Els processos de l'usuari $usuari són els següents: \n"
+        echo "Els processos de l'usuari $usuari són els següents:"
         ps -u $usuari
 else
         echo "L'usuari $usuari NO existeix."
