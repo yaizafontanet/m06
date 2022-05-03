@@ -14,6 +14,7 @@ if [[ $# != 0 ]]; then
             total=$sum
         else
             echo "L'argument $arg no és un número. Utilitza arguments númerics."
+	        exit 1
         fi
     done
     echo "La suma de tots els nombres rebuts per parametre és: $total"

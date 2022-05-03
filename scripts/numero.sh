@@ -3,7 +3,7 @@
 while :
 do
     #Mostra un número aleatori del 1 al 10 per pantalla
-    echo $((1 + $RANDOM % 10))
+    echo $RANDOM
 
     #Demana a l’usuari si vol sortir
     echo "Vols finalitzar el programa? (S or s)"
@@ -12,6 +12,6 @@ do
     #condició per aturar el programa
     if [[ "$resposta" == "S" ]] || [[ "$resposta" == "s" ]] ; then
         echo "Programa finalitzat"
-        break
+        exit 1
     fi
 done
