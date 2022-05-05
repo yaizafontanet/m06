@@ -9,23 +9,29 @@ error_exit()
     exit 1
 }
 
+proces()
+{
+    #Control per veure si el fitxer existeix
+    if [[ -f $fitxer ]] && [[curl $URI >/dev/null]]; then
+    else
+        echo error_exit
+    fi
+}
+
 #Control de que s'han indicat almenys dos paràmetres
 if [[ $# == 2 ]]; then
     if [[ "$R1" == "ldap" ]]; then
         URI=$1
         fitxer=$2
-        if [[ -f $fitxer ]] && [[curl $URI >/dev/null]]; then
-        else
-            echo error_exit
-        fi
+        proces
     elif [[ "$R2" == "ldap" ]]; then
         URI=$2
         fitxer=$1
-        #Control per veure si el fitxer existeix
-        if [[ -f $fitxer ]] && [[curl $URI >/dev/null]]; then
-        else
-            echo error_exit
-        fi
+        proces
     else
         echo "Els paràmetres indicats són incorrectes. Cal que indiquis la URI del servidor LDAP i el fitxer amb el que vols treballar."
     fi
+else
+    echo "Ha d'indicar com a mínim dos paràmetres!"
+fi
+
