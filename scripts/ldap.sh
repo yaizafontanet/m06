@@ -10,11 +10,14 @@ error_exit()
 }
 
 #Control de que s'han indicat almenys dos paràmetres
-if [[ $# == 1 ]]; then
+if [[ $# == 2 ]]; then
     if [[ "$R1" == "ldap" ]]; then
         URI=$1
         fitxer=$2
-        if [[ -f ]]
+        if [[ -f $fitxer ]] && [[curl $URI >/dev/null]]; then
+        else
+            echo error_exit
+        fi
     elif [[ "$R2" == "ldap" ]]; then
         URI=$2
         fitxer=$1
