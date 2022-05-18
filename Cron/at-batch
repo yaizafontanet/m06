@@ -1,0 +1,11 @@
+#Instal·la l'antivirus clamav i programa'l perquè s'executi quan la càrrega del sistema sigui baixa (ordre batch). Quina càrrega has triat? Com pots comprovar la càrrega del sistema?
+sudo apt-get install clamav
+sudo freshclam
+
+sudo apt-get install at
+sudo systemctl enable --now atd.service
+
+batch 
+
+
+#Programa el buidatge del directori /tmp a una hora determinada (una sola vegada) amb l'ordre at.
