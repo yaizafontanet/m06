@@ -20,7 +20,7 @@ proces()
             nom=$(echo $line | awk -F ',' '{print $1}')
 
             #Obetenir el primer cognom del usuari que volem afegir
-            cognom=$(echo $line | awk -F ',' '{print $2}')
+            cognom=$(echo $line | awk -F ',' '{print $2}' | awk -F ' ' '{print $1}')
 
             #Contador per assignar un numero
             num=$((n+1))
@@ -28,7 +28,7 @@ proces()
             #Creem una contrasenya formada pel cognom del usuari i numeros
             passwd=$($cognom+123)
 
-                #Crear l'arxiu amb els paràmetres dels usuaris
+            #Crear l'arxiu amb els paràmetres dels usuaris
             echo "[$nom](usuario)
 username=$nom
 secret=$passwd
