@@ -1,0 +1,2 @@
+contrab -e
+0 19 * * * /home/yaiza/hola.sh > /home/yaiza/logs/hola.log 2>&1
