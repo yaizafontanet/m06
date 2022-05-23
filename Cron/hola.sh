@@ -15,8 +15,7 @@ echo "Hola $USER"
 # 0 19 4 2 * /home/yaiza/hola.sh >> /home/yaiza/logs/hola3.log
 
 #4- Cada 2 setmanes, divendres a les 9 de la nit
-# 0 21 * * 5 [[ $(expr $(date +%W) % 2) -eq 0 ]] && /home/yaiza/hola.sh >> /home/yaiza/logs/hola4.log
+# 0 21 1-7,15-21 * * [ $(date +\%d) -le 05 ]] && /home/yaiza/hola.sh >> /home/yaiza/logs/hola4.log
 
 #5- Cada primer diumenge de cada mes
-# 0 0 * * 7 [[ $(date +\%d) -le 07 ]] && /home/yaiza/hola.sh >> /home/yaiza/logs/hola5.log
-# 0 0 * * 0 [[ $(date +\%d) -le 07 ]] && /home/yaiza/hola.sh >> /home/yaiza/logs/hola5.log
+# 0 8 1-7 * * [[ $(date +\%d) -le 07 ]] && /home/yaiza/hola.sh >> /home/yaiza/logs/hola5.log
